@@ -9,6 +9,8 @@ const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
 
+  // console.log(data)
+
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
@@ -44,7 +46,8 @@ const BlogIndex = ({ data, location }) => {
                       <span itemProp="headline">{title}</span>
                     </Link>
                   </h2>
-                  <small>{post.frontmatter.date}</small>
+                  <small>{post.frontmatter.date}</small> | 
+                  {' '}<small>{post.fields.readingTime.text}</small>
                 </header>
                 <section>
                   <p
@@ -77,6 +80,9 @@ export const pageQuery = graphql`
         excerpt
         fields {
           slug
+          readingTime {
+            text
+          }
         }
         frontmatter {
           date(formatString: "MMMM DD, YYYY")
