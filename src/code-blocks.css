@@ -1,0 +1,188 @@
+pre[class*="language-"],
+code[class*="language-"] {
+  color: #ffffff;
+  border-radius: 2px;
+  font-size: 14px;
+  text-shadow: none;
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+pre[class*="language-"]::selection,
+code[class*="language-"]::selection,
+pre[class*="language-"]::mozselection,
+code[class*="language-"]::mozselection {
+  text-shadow: none;
+  background: #174782;
+}
+@media print {
+  pre[class*="language-"],
+  code[class*="language-"] {
+    text-shadow: none;
+  }
+}
+pre[class*="language-"] {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+  background: rgb(15, 1, 38);
+}
+:not(pre) > code[class*="language-"] {
+  padding: 0.1em 0.3em;
+  border-radius: 0.3em;
+  color: #ff0033;
+  background: #ffebf0;
+}
+/*
+* Tokens
+*/
+.namespace {
+  opacity: 0.7;
+}
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #304141;
+}
+.token.punctuation {
+  color: #999999;
+}
+.token.property,
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: lightskyblue;
+}
+.token.boolean {
+  color: #b348ff;
+}
+.token.tag,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #ff008c;
+}
+.token.selector,
+.token.function {
+  color: greenyellow;
+}
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #ffee05;
+}
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #ff8000;
+  background: #242324;
+}
+.token.regex,
+.token.important,
+.token.variable {
+  color: #ffa600;
+}
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+.token.italic {
+  font-style: italic;
+}
+.token.entity {
+  cursor: help;
+}
+/*
+* Line highlighting
+*/
+pre[data-line] {
+  position: relative;
+}
+pre[class*="language-"] > code[class*="language-"] {
+  position: relative;
+  z-index: 1;
+}
+.line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: #5d4e22;
+  box-shadow: inset 5px 0 0 #ffbf00;
+  z-index: 0;
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+/*
+* Language badges
+*/
+
+.gatsby-highlight {
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+}
+.gatsby-highlight pre[class*="language-"] {
+  -webkit-overflow-scrolling: touch;
+}
+.gatsby-highlight pre[class*="language-"]::before {
+  background: black;
+  border-radius: 0 0 0.25rem 0.25rem;
+  color: white;
+  font-size: 12px;
+  letter-spacing: 0.025rem;
+  padding: 0.1rem 0.5rem;
+  position: absolute;
+  right: 1rem;
+  text-align: right;
+  text-transform: uppercase;
+  top: 0;
+}
+.gatsby-highlight pre[class="language-js"]::before {
+  content: "js";
+  background: #f7df1e;
+  color: black;
+}
+
+.gatsby-highlight pre[class="language-html"]::before {
+  content: "html";
+  background: #e34c26;
+  color: white;
+}
+
+.gatsby-highlight pre[class="language-css"]::before {
+  content: "css";
+  background: #136eb2;
+  color: white;
+}
+
+.gatsby-highlight pre[class="language-text"]::before {
+  content: "text";
+  background: white;
+  color: black;
+}
+
+.gatsby-highlight pre[class="language-markdown"]::before {
+  content: "md";
+  background: white;
+  color: black;
+}
