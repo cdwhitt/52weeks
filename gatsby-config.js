@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `52weeks.io`,
     author: {
       name: `Casey Whittaker`,
-      summary: `who lives and learns new things in Boston.`,
+      summary: `who lives and listens to new music in Boston.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `A blog about new and upcoming music.`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
     social: {
       twitter: `theCaseyWhitt`,
