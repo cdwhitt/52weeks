@@ -46,8 +46,8 @@ const BlogIndex = ({ data, location }) => {
                       <span itemProp="headline">{title}</span>
                     </Link>
                   </h2>
-                  <small>{post.frontmatter.date}</small> | 
-                  {' '}<small>{post.fields.readingTime.text}</small>
+                  <small><b>{post.frontmatter.date}</b></small> | 
+                  {' '}<code className="language-text">{post.fields.readingTime.text}</code>
                 </header>
                 <section>
                   <p
